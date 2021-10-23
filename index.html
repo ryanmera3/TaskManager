@@ -16,26 +16,50 @@
 
 <body>
   <header>
-    <nav class="navbar navbar-dark navbar-expand bg-dark text-light no-select">
+    <nav class="navbar navbar-expand text-dark no-select justify-content-center">
       <a class="navbar-brand ms-3" href="#">
-        <img src="https://codeworks.blob.core.windows.net/public/assets/img/cw-mark.png" height="45" alt=""
-          loading="lazy">
-        <span class="ms-2">TaskManager</span>
+
+        <span class="ms-2 display-2">TaskManager</span>
       </a>
     </nav>
   </header>
-  <main>
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-12">
-          <div id="app"></div>
-        </div>
+  <section class="container">
+    <div class="row mt-3">
+      <div class="col-md-12">
+        <form class="row form-inline" onsubmit="app.listsController.createList()">
+          <div class=" col-4 form-group mb-2">
+
+            <div class="row form-group mx-sm-3 mb-2">
+              <input type="text" class=" col-4 form-control w-50" name="name" id="list" placeholder="Add list"
+                minlength="3" maxlength="15" required>
+              <input type="color" class="col-4 form-control-color border-0" name="color" id="color" value="#563d7c"
+                title="Choose your color">
+              <button type="submit" class="col-4 btn btn-primary mb-2">Submit</button>
+            </div>
+          </div>
+        </form>
       </div>
     </div>
+
+  </section>
+  <main>
+    <div class=" container-fluid">
+      <div class="row" id="lists">
+
+
+
+
+
+      </div>
+    </div>
+    </div>
+
+
+
   </main>
-  <footer class="bg-dark text-light">
+  <footer class=" text-dark">
     <div class="text-center no-select">
-      <p><small>Made with 💖 by Codeworks</small></p>
+      <p><small>Made by Ryan M.</small></p>
     </div>
   </footer>
 

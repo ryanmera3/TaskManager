@@ -11111,6 +11111,10 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+.txt-shadow {
+  text-shadow: 1px 1px black;
+}
+
 .bg-primary {
   color: color-yiq(#3ba5dc);
   background-color: #3ba5dc !important;
