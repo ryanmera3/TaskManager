@@ -11,7 +11,7 @@ class TasksService {
     ProxyState.tasks = [...ProxyState.tasks, task]
   }
   removeTask(id) {
-    if (window.confirm()) {
+    if (window.confirm('Are you sure you want to delete your task?')) {
       console.log("deleting", id)
       ProxyState.tasks = ProxyState.tasks.filter(t => t.id != id)
     } else {
