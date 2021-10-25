@@ -11,14 +11,20 @@ class TasksService {
     ProxyState.tasks = [...ProxyState.tasks, task]
   }
   removeTask(id) {
-    console.log("deleting", id)
-    ProxyState.tasks = ProxyState.tasks.filter(t => t.id != id)
+    if (window.confirm()) {
+      console.log("deleting", id)
+      ProxyState.tasks = ProxyState.tasks.filter(t => t.id != id)
+    } else {
+      console.log('You have chosen to not delete')
+    }
   }
   isChecked(id) {
     const found = ProxyState.tasks.find(t => t.id == id)
     found.checked = !found.checked
     ProxyState.tasks = ProxyState.tasks
   }
+
+
 
 
 }

@@ -9,6 +9,7 @@ export class List {
     this.id = data.id || generateId()
     this.name = data.name
     this.color = data.color
+    this.quantity = 0
   }
   get Template() {
     return `
@@ -20,13 +21,14 @@ export class List {
               ${this.name}  
 
               </div>
-              <button class="btn btn-danger" onclick="app.listsController.removeList('${this.id}'); app.listsController.confirmDelete()">Delete </button>
-              <div class="card-body">
+              <button class="btn btn-danger" onclick="app.listsController.removeList('${this.id}')">Delete </button>
+              <div class="card-body" >
+              <p id="quant"></p>
               <b>Tasks</b>
-              <form onsubmit="app.tasksController.createTask('${this.id}')">
+              <form onsubmit="app.tasksController.createTask('${this.id}') ">
                     ${this.getTasks()}
                 <div class="input-group mb-3 mt-1">
-                
+                 
                   <input type="text" class="form-control" placeholder="Add to task list"
                     aria-label="Add to task list" aria-describedby="basic-addon2" name="taskName" minlength="3" maxlength="50" required>
                   <div class="input-group-append">

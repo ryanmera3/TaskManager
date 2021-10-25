@@ -12,6 +12,10 @@ class AppState extends EventEmitter {
 
   lists = []
 
+  incomplete = []
+
+  complete = []
+
 }
 
 export const ProxyState = new Proxy(new AppState(), {
