@@ -25,17 +25,18 @@ class ListsService {
     confirm("Are you sure you want to delete")
   }
 
-  isFinished(id) {
-
-    const quant = ProxyState.tasks.find(t => t.id == id)
-
-    if (quant.checked && quant.quantity == 0) {
-      quant.quantity++
-      quant.quantity == quant.quantity
-      ProxyState.tasks = ProxyState.tasks
-      console.log(quant.quantity)
-    }
-  }
+  // isFinished(id) {
+  //   const quant = ProxyState.tasks.find(t => t.id == id)
+  //   const quantList = ProxyState.lists.find(t => t.id)
+  //   let totalQuant = quantList.totalQuant
+  //   if (quant.checked) {
+  //     totalQuant++
+  //     ProxyState.tasks = ProxyState.tasks
+  //     console.log("test", totalQuant, quantList.quantity)
+  //   } else {
+  //     console.log(totalQuant)
+  //   }
+  // }
 }
 
 

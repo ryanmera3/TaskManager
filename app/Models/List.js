@@ -10,6 +10,7 @@ export class List {
     this.name = data.name
     this.color = data.color
     this.quantity = 0
+    this.totalQuant = 0
   }
   get Template() {
     return `
@@ -23,7 +24,7 @@ export class List {
               </div>
               <button class="btn btn-danger" onclick="app.listsController.removeList('${this.id}')">Delete </button>
               <div class="card-body" >
-              <p id="quant"> ${this.quantity} / ${this.quantity}</p>
+              <p id="quant"> ${this.quantity} / ${this.totalQuant}</p>
               <b>Tasks</b>
               <form onsubmit="app.tasksController.createTask('${this.id}') ">
                     ${this.getTasks()}

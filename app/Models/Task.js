@@ -14,7 +14,7 @@ export class Task {
     return `
 
     <div class="form-check pb-2">
-                <input class="form-check-input" type="checkbox" id="flexCheckDefault"  onclick="app.tasksController.isChecked('${this.id}'); app.listsController.isFinished('${this.id}')" ${this.checked ? 'checked' : " "} >
+                <input class="form-check-input" type="checkbox" id="flexCheckDefault"  onclick="app.tasksController.isChecked('${this.id}')" ${this.checked ? 'checked' : " "} >
 
                 
 
