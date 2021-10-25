@@ -23,7 +23,7 @@ export class List {
               </div>
               <button class="btn btn-danger" onclick="app.listsController.removeList('${this.id}')">Delete </button>
               <div class="card-body" >
-              <p id="quant"></p>
+              <p id="quant"> ${this.quantity} / ${this.quantity}</p>
               <b>Tasks</b>
               <form onsubmit="app.tasksController.createTask('${this.id}') ">
                     ${this.getTasks()}

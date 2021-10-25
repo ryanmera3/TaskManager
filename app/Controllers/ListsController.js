@@ -46,8 +46,8 @@ export class ListsController {
     listsService.confirmDelete()
   }
 
-  // isFinished(id) {
-  //   listsService.isFinished(id)
-  // }
+  isFinished(id) {
+    listsService.isFinished(id)
+  }
 
 }
